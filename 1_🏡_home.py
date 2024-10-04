@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 import pandas as pd 
 from datetime import datetime
 
@@ -20,9 +19,9 @@ if "data" not in st.session_state:
 st.markdown("# FIFA 23 OFFICIAL WEBSITE ⚽")
 st.sidebar.markdown("Desenvolvido por: [Adson](https://github.com/Adson-C?tab=repositories)")
 
-btn = st.button("Acesso os dados do Fifa Kaggle")
-if btn:
-    webbrowser.open_new_tab("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data)")
+btn = st.link_button(
+    "Acesso os dados do Fifa Kaggle", 
+    "https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
     
 st.markdown(
     """    
